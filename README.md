@@ -158,10 +158,10 @@ OBJS = $(SRCS:.c=.o) # Don gian la thay cac file .c trong SRCS => .o
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 ```
   
-  - pattern (mẫu tìm): mẫu để tìm trong danh sách -  thường có ký tự `%` để đại diện cho phần giữ nguyên
-  - replacement (mẫu thay): mẫu kết quả - có thể dùng lại `%` để thay thế phần được match 
-  - list (danh sách): Chuỗi (hoặc danh sách file) mà ta muốn chuyển (danh sách gốc)
-  - Một số ví dụ:
+  * pattern (mẫu tìm): mẫu để tìm trong danh sách -  thường có ký tự `%` để đại diện cho phần giữ nguyên
+  * replacement (mẫu thay): mẫu kết quả - có thể dùng lại `%` để thay thế phần được match
+  * list (danh sách): Chuỗi (hoặc danh sách file) mà ta muốn chuyển (danh sách gốc)
+  * Một số ví dụ:
 
 | Câu lệnh | Kết quả | ý nghĩa |
 |----------|---------|---------|
