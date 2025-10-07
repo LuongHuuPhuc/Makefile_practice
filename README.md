@@ -137,12 +137,12 @@ $(suffix main.c) # -> .c
 ```
 
 * `wildcard pattern...` -> Dò tìm các file match theo pattern
-- Nó quét các file như trong shell bash để tìm các file, nên phải dùng `*`
-- Nó chỉ trả về các file đã tồn tại trong hệ thống, nêu không có => Trả về là rỗng
+  - Nó quét các file như trong shell bash để tìm các file, nên phải dùng `*`
+  -  Nó chỉ trả về các file đã tồn tại trong hệ thống, nêu không có => Trả về là rỗng
 ```makefile 
 SRC = $(wildcard src/*.c)
 ```
-- Thay vào đó, để hiển thị ra các file chưa tồn tại trong hệ thống, ta dùng **cơ chế thay thế chuỗi** trong Make
+  - Thay vào đó, để hiển thị ra các file chưa tồn tại trong hệ thống, ta dùng **cơ chế thay thế chuỗi** trong Make
 ```makefile
 $(var: SUFFIX1=SUFFIX2) # Chi la phep xu ly chuoi, khong lien quan den viec file co ton tai hay khong
 ```
@@ -160,6 +160,7 @@ OBJS = $(patsubst %.c,%.o,$(SRCS))
   - replacement (mẫu thay): mẫu kết quả - có thể dùng lại `%` để thay thế phần được match 
   - list (danh sách): Chuỗi (hoặc danh sách file) mà ta muốn chuyển (danh sách gốc)
   - Một số ví dụ:
+
 | Câu lệnh | Kết quả | ý nghĩa |
 |----------|---------|---------|
 |`$(patsubst %.c, %.o, main.c test.c)`|`main.o`,`test.o`| Đổi đuôi `.c` thành `.o`|
